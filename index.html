@@ -21,16 +21,72 @@
     href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
 
-  <!-- daisyUI -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-
-  <!-- tailwind css -->
+  <!-- daisyUI + tailwind css-->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
+  <!-- Header Section Start -->
+  <div class="bg-[#BADEFF42]">
+    <div class="navbar container mx-auto">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="-1"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-30 p-2 shadow space-y-2">
+            <span class="cursor-pointer"><i class="fa-solid fa-circle-question"></i>FAQ</span>
+            <span class="cursor-pointer"><i class="fa-solid fa-book-open"></i>Learn</span>
+            <span class="cursor-pointer"><i class="fa-solid fa-arrow-right-from-bracket"></i>Learn</span>
+          </ul>
+        </div>
+        <div class="flex items-center space-x-1 cursor-pointer text-xl">
+          <span class="font-bold">English</span>
+          <img src="./assets/logo.png" alt="">
+          <span class="font-bangla">জানালা</span>
+        </div>
+      </div>
+      <div class="navbar-end hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 space-x-4">
+          <button class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i>FAQ</button>
+          <button class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i>Learn</button>
+          <button class="btn btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i>Learn</button>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Header Section End -->
 
-
+  <!-- Banner Section Start -->
+  <div class="flex items-center mt-6 lg:mt-12 container mx-auto gap-5 lg:gap-60 px-4 lg:px-0 flex-col-reverse lg:flex-row">
+    <div class="flex-1 flex flex-col items-center lg:items-start">
+      <h1 class="text-5xl font-bold"><span class="text-[#00BCFF]">English </span>is Easy!!</h1>
+      <p class="max-w-[727px] text-2xl mt-7 font-bangla text-[#18181B] opacity-[0.8] font-medium">আজ থেকেই আপনার ভাষা
+        শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive
+        Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+      <div class="">
+        <div class="">
+          <div class="">
+            <div class="flex flex-col gap-4 mt-7">
+              <input type="email" class="input" placeholder="Enter Your Name" />
+              <input type="password" class="input" placeholder="Enter Your Password" />
+              <button class="btn btn-primary contain-inline-size w-32">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-1">
+      <picture>
+        <img src="./assets/hero-student.png" alt="Image of a student">
+      </picture>
+    </div>
+  </div>
   <script src="./index.js"></script>
 </body>
 
