@@ -42,7 +42,7 @@
             class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-30 p-2 shadow space-y-2">
             <span class="cursor-pointer"><i class="fa-solid fa-circle-question"></i>FAQ</span>
             <span class="cursor-pointer"><i class="fa-solid fa-book-open"></i>Learn</span>
-            <span class="cursor-pointer"><i class="fa-solid fa-arrow-right-from-bracket"></i>Learn</span>
+            <span class="cursor-pointer"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</span>
           </ul>
         </div>
         <div class="flex items-center space-x-1 cursor-pointer text-xl">
@@ -55,7 +55,8 @@
         <ul class="menu menu-horizontal px-1 space-x-4">
           <button class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i>FAQ</button>
           <button class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i>Learn</button>
-          <button class="btn btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i>Learn</button>
+          <button class="btn btn-outline btn-primary"><i
+              class="fa-solid fa-arrow-right-from-bracket"></i>Logout</button>
         </ul>
       </div>
     </div>
@@ -63,7 +64,7 @@
   <!-- Header Section End -->
 
   <!-- Banner Section Start -->
-  <div
+  <div 
     class="flex items-center mt-6 lg:mt-12 container mx-auto gap-5 lg:gap-60 px-4 lg:px-0 flex-col-reverse lg:flex-row">
     <div class="flex-1 flex flex-col items-center lg:items-start">
       <h1 class="text-5xl font-bold"><span class="text-[#00BCFF]">English </span>is Easy!!</h1>
@@ -84,6 +85,24 @@
       </picture>
     </div>
   </div>
+  <!-- Banner Section End -->
+
+  <!-- Vocabulary Section Start -->
+  <div class="container mx-auto mt-20 pb-20 px-4 lg:px-0 flex flex-col items-center">
+    <h1 class="text-4xl font-bold"><span class="text-[#00BCFF]">Let's </span>Learn Vocabularies</h1>
+    <div id="lessons-container" class="flex space-x-4 mt-10 ">
+      <!-- Levels will be dynamically added here -->
+    </div>
+    <div class="w-full">
+      <div id="level-container" class="p-8 bg-[#F8F8F8] mt-10 grid grid-cols-3 gap-8 w-full">
+        <!-- Lesson buttons will be dynamically added here -->
+         
+      </div>
+    </div>
+
+  </div>
+  <!-- Vocabulary Section End -->
+
   <script src="./index.js"></script>
 </body>
 
