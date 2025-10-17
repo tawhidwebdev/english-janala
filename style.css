@@ -1,7 +1,11 @@
-body{
+*{
   font-family: "Poppins", sans-serif;
 }
 
 .font-bangla{
   font-family: "Hind Siliguri", sans-serif;
+}
+.active{
+  background-color: #0753c4;
+  color: white;
 }
