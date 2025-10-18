@@ -23,6 +23,36 @@ const loadLevelWords = (level_no) => {
     } );
 };
 
+const showWordDetails = (id) =>{
+  const url = (`https://openapi.programming-hero.com/api/word/${id}`);
+  fetch(url)
+    .then((res) => res.json())
+    .then((dtails) => displayWordDetails(dtails.data));
+}
+
+const displayWordDetails = (details) => {
+  console.log(details);
+  const wordContainer = document.getElementById('word_container');
+  wordContainer.innerHTML = `
+    <h3 class="text-3xl text-black font-semibold">${details.word} (<i class="fa-solid fa-microphone-lines"></i> :${details.pronunciation})</h3>
+    <div class="text-2xl text-black font-semibold space-y-4">
+      <h5>Meaning</h5>
+      <p>${details.meaning}</p>
+    </div>
+    <div class="text-2xl text-black font-semibold space-y-4">
+      <h5>Example</h5>
+      <p class="font-normal text-[#2a2a2d]">${details.sentence}</p>
+    </div>
+      <h5 class="text-2xl text-black font-semibold">সমার্থক শব্দ গুলো</h5>
+      <span class="text-xl text-black font-medium px-5 py-2 bg-[#EDF7FF] rounded-xl">Enthusiastic</span>
+      <span class="text-xl text-black font-medium px-5 py-2 bg-[#EDF7FF] rounded-xl">Enthusias</span>
+      <span class="text-xl text-black font-medium px-5 py-2 bg-[#EDF7FF] rounded-xl">Enthusiastic</span>
+    </div>
+  `;
+  const modal = document.getElementById('show_word_details');
+  modal.showModal();
+}
+
 const displayLevelWords = (words) => {
   const levelContainer = document.getElementById('level-container')
   levelContainer.innerHTML = "";
@@ -45,7 +75,7 @@ const displayLevelWords = (words) => {
             <p class="text-xl text-[#2a2a2d] font-medium">Meaning /Pronounciation</p>
             <span class="text-[28px] text-[#2a2a2d] font-semibold font-bangla">${word.meaning ? word.meaning : "শব্দটির অর্থ পাওয়া যায়নি।"} / ${word.pronunciation ? word.pronunciation : "শব্দটির উচ্চারণ পাওয়া যায়নি।"}</span>
             <div class="flex justify-between mt-10">
-              <div onclick="my_modal_5.showModal()" class="w-14 h-14 rounded-lg text-[#374957] bg-[rgba(26,144,255,0.1)] flex items-center justify-center text-xl"><i class="fa-solid fa-circle-exclamation"></i></div> 
+              <div onclick="showWordDetails(${word.id})" class="w-14 h-14 rounded-lg text-[#374957] bg-[rgba(26,144,255,0.1)] flex items-center justify-center text-xl"><i class="fa-solid fa-circle-exclamation"></i></div> 
               <div class="w-14 h-14 rounded-lg text-[#374957] bg-[rgba(26,144,255,0.1)] flex items-center justify-center text-xl"><i class="fa-solid fa-volume-high"></i></div>
             </div>
           </div>
@@ -53,6 +83,7 @@ const displayLevelWords = (words) => {
     levelContainer.append(wordDiv);
   })
 }
+
 const displayLessons = (lessons) => {
   const lessonContainer = document.getElementById('lessons-container')
   lessonContainer.innerHTML = "";

@@ -104,11 +104,27 @@
       </div>
     </div>
 
+
     <!-- Open the modal using ID.showModal() method -->
-    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+    <dialog id="show_word_details" class="modal modal-bottom sm:modal-middle">
       <div class="modal-box">
-        <h3 class="text-lg font-bold">Hello!</h3>
-        <p class="py-4">Press ESC key or click the button below to close</p>
+        <div id="word_container" class="space-y-8">
+          <h3 class="text-3xl text-black font-semibold">Eager (  :ইগার)</h3>
+          <div class="text-2xl text-black font-semibold space-y-4">
+            <h5>Meaning</h5>
+            <p>আগ্রহী</p>
+          </div>
+          <div class="text-2xl text-black font-semibold space-y-4">
+            <h5>Example</h5>
+            <p class="font-normal">The kids were eager to open their gifts.</p>
+          </div>
+          <div class="space-y-4">
+            <h5 class="text-2xl text-black font-semibold">সমার্থক শব্দ গুলো</h5>
+            <span class="text-xl text-black font-medium px-5 py-2 bg-[#EDF7FF] rounded-xl">Enthusiastic</span>
+            <span class="text-xl text-black font-medium px-5 py-2 bg-[#EDF7FF] rounded-xl">Enthusias</span>
+            <span class="text-xl text-black font-medium px-5 py-2 bg-[#EDF7FF] rounded-xl">Enthusiastic</span>
+          </div>
+        </div>
         <div class="modal-action">
           <form method="dialog">
             <!-- if there is a button in form, it will close the modal -->
